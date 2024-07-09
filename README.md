@@ -14,3 +14,5 @@
 ## Implemented JWT Authentication
 ![image](https://github.com/Sanskar50/Footwear-ecom/assets/99363431/9f25c09b-ef88-4ade-9e85-4fd61dc21fc2)
 
+Images and UI are inspired from https://neemans.com/
+
