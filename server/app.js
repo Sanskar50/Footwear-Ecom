@@ -16,11 +16,11 @@ app.use(express.json());
 app.use(cors());
 app.use(requireAuth);
 app.use('/cart', cartRoutes);
-app.use('/user', userRoutes);
+// app.use('/user', userRoutes);
 
 
 
-mongoose.connect(process.env.MONGO-URL)
+mongoose.connect('mongodb+srv://mr-ss:OqPlVe8nWQieZ65s@cluster0.rwwbhzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
   app.listen(4000, () => {
     console.log(`Server is running on port ${4000}`);

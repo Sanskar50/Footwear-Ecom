@@ -30,7 +30,7 @@ function Home() {
 }
 
 function App() {
-  const { user } = useAuthContext()
+  // const { user } = useAuthContext()
 
   return (
     <div className="app">
@@ -39,15 +39,17 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/'
-            element={user ? <Home /> : <Navigate to="/login" />}/>
-          <Route 
+            // element={user ? <Home /> : <Navigate to="/login" />}
+            element={<Home/>}
+            />
+          {/* <Route 
               path="/login" 
               element={!user ? <Login /> : <Navigate to="/" />} 
             />
             <Route 
               path="/signup" 
               element={!user ? <Signup /> : <Navigate to="/" />} 
-            />
+            /> */}
           <Route path='/derbies'
             element={<Derbies />} />
           <Route path='/movers'

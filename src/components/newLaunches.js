@@ -27,30 +27,30 @@ const Launches = () => {
 
 
     const addToCart = async (shoe) => {
-        const userString = localStorage.getItem('user');
+        // const userString = localStorage.getItem('user');
 
-        if (!userString) {
-            console.error('User not logged in');
-            // Optionally, redirect to login page or show a message to the user
-            return;
-        }
+        // if (!userString) {
+        //     console.error('User not logged in');
+        //     // Optionally, redirect to login page or show a message to the user
+        //     return;
+        // }
         
-        const user = JSON.parse(userString);
-        const token = user.token; // Assuming the token is stored in the user object
+        // const user = JSON.parse(userString);
+        // const token = user.token; // Assuming the token is stored in the user object
     
-        if (!token) {
-            console.error('No authentication token found');
-            return;
-        }
+        // if (!token) {
+        //     console.error('No authentication token found');
+        //     return;
+        // }
     
         try {
             const response = await axios.post('http://localhost:4000/cart/add', 
                 shoe, // Just send the shoe data, no need to include user information
-                {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                }
+                // {
+                //     headers: {
+                //         'Authorization': `Bearer ${token}`
+                //     }
+                // }
             );
             
             console.log('Item added to cart:', response.data);
