@@ -20,7 +20,7 @@ app.use('/cart', cartRoutes);
 
 
 
-mongoose.connect('mongodb+srv://mr-ss:OqPlVe8nWQieZ65s@cluster0.rwwbhzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
   app.listen(4000, () => {
     console.log(`Server is running on port ${4000}`);
